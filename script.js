@@ -1,12 +1,11 @@
 function onSubmit(){
     var month = document.getElementById("Month").value;
     var day = document.getElementById("Day").value;
-    //var name = document.getElementById("name").value;
+    var name = document.getElementById("name").value;
+    console.log(name);
     var sign = determineSign(parseInt(month),parseInt(day));
-    document.getElementById("sign").innerHTML=signs[sign];
-    document.getElementById("message").innerHTML=messages[sign];
-    var imageFile = "img/" + signs[sign] + ".png";
-    document.getElementById("image").src=imageFile
+    document.getElementById("message").innerHTML=name + ", you're sign is " + signs[sign] + ". " + messages[sign];
+    document.getElementById("image").src= "img/" + signs[sign] + ".png";
 }
 
 
@@ -53,7 +52,7 @@ function determineSign(month,day){
     }
 }
 
-var signs = ["Aquarius","Pisces","Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capricorn","Your birthday is not real."]
+var signs = ["Aquarius","Pisces","Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagitarius","Capricorn","Your birthday is not real."]
 
 
 
@@ -70,7 +69,7 @@ messages[8] = "Spend some quality time with the one you love. Your talents will 
 messages[9] = "You can make financial deals, but it may be best if you're not using your own cash. It might be best to keep your ideas to yourself today. Social functions will bring you in touch with new lovers.";
 messages[10] = "Take your time; do not make any decisions in haste. You have to feel free to come and go as you please to achieve happiness. Avoid conflicts with in-laws or other family members.";
 messages[11] = "Sudden changes concerning coworkers may surprise you. Be careful not to consume too many spicy foods, or minor health problems could put you out of commission for the day. Don't be too quick to judge.";
-messages[12] = "Please try again."
+messages[12] = "Please try again.";
 
 
 
