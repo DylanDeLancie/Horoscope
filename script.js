@@ -1,59 +1,76 @@
-//var sign = 0;
-var messages= [];
-var signs = ["Aquarius","Pisces","Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capricorn"]
 function onSubmit(){
     var month = document.getElementById("Month").value;
     var day = document.getElementById("Day").value;
     //var name = document.getElementById("name").value;
-    var sign = determineSign(parseInt(month),parseInt(day))
+    var sign = determineSign(parseInt(month),parseInt(day));
     document.getElementById("sign").innerHTML=signs[sign];
-    document.getElementById("message").innerHTML=message[sign];
+    document.getElementById("message").innerHTML=messages[sign];
+    var imageFile = "img/" + signs[sign] + ".png";
+    document.getElementById("image").src=imageFile
 }
 
 
 function determineSign(month,day){
 
-    if((month == 1 && 20 <= day <= 31) || (month == 2 && day <= 18)){
+    if((month == 1 && day <= 31) || (month == 2 && day <= 18)){
         return 0;
     }
-    if((month == 2 && 19 <= day <= 29 ) || (month == 3 && day <= 20)){
-        sign = 1;
+    if((month == 2 && day <= 29) || (month == 3 && day <= 20)){
+        return 1;
     }
     if((month == 3 && 21 <= day <= 31) || (month == 4 && day <= 19)){
-        sign = 2;
+        return 2;
     }
-    if((month == 4 && 20 <= day <= 30) || (month == 5 && day <= 20)){
-        sign = 3;
+    if((month == 4 && day <= 30) || (month == 5 && day <= 20)){
+        return 3;
     }
-    if((month == 5 && 21 <= day <= 31) || (month == 6 && day <= 20)){
-        sign = 4;
+    if((month == 5 && day <= 31) || (month == 6 && day <= 20)){
+        return 4;
     }
-    if((month == 6 && 20 <= day <= 30) || (month == 7 && day <= 22 )){
-        sign = 5;
+    if((month == 6 && day <= 30) || (month == 7 && day <= 22 )){
+        return 5;
     }
-    if((month == 7 && 23 <= day <= 31) || (month == 8 && day <= 22)){
-        sign = 6;
+    if((month == 7 && day <= 31) || (month == 8 && day <= 22)){
+        return 6;
     }
-    if((month == 8 && 23 <= day <= 31) || (month == 9 && day <= 22)){
-        sign = 7;
+    if((month == 8 && day <= 31) || (month == 9 && day <= 22)){
+        return 7;
     }
-    if((month == 9 && 23 <= day <= 30) || (month == 10 && day <= 22)){
-        sign = 8;
+    if((month == 9 && day <= 30) || (month == 10 && day <= 22)){
+        return 8;
     }
-    if((month == 10 && 23 <= day <= 31) || (month == 11 && day <= 21)){
-        sign = 9;
+    if((month == 10 && day <= 31) || (month == 11 && day <= 21)){
+        return 9;
     }
-    if((month == 11 && 22 <= day <= 30) || (month == 12 && day <= 21)){
-        sign = 10;
+    if((month == 11 && day <= 30) || (month == 12 && day <= 21)){
+        return 10;
     }
-    if((month == 12 && 22 <= day <= 31) ||(month == 1 && day <= 19)){
-        sign = 11;
+    if((month == 12 && day <= 31) ||(month == 1 && day <= 19)){
+        return 11;
+    }
+    else{
+        return 12;
     }
 }
 
+var signs = ["Aquarius","Pisces","Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capricorn","Your birthday is not real."]
 
 
 
+var messages= [];
+messages[0] = "Your emotional partner will push the right buttons today. Travel opportunities should be your first choice. Your high energy will enable you to take the role of leader in group functions.";
+messages[1] = "You may want to sign up for lectures or courses that will bring you mental stimulation. You need to spend less time daydreaming and more time accomplishing. Difficulties with female members of your family may result in estrangement's.";
+messages[2] = "Entertainment could be pleasing if it is of an energetic nature. Children could cost you more than you can afford. Residential moves are evident.";
+messages[3] = "Tempers will mount if you are too pushy at work. Do not lend money to friends, or contribute more than necessary to groups unworthy of your cash. You can make gains if you look at long-term investments.";
+messages[4] = "Your love will not be willing to listen to your criticism. This will not be the day to lend money to friends or family. Try to avoid serious discussions with loved ones.";
+messages[5] = "Do not hesitate to help elders with legal documents that are too confusing for them. Go after your goals and don't be afraid to ask for assistance. You hard work and dedication will payoff, so stick to your guns and do your job well.";
+messages[6] = "Travel and communication will be lucrative for you. You can't win and they won't listen. Travel in pursuit of pleasure and knowledge.";
+messages[7] = "Drastic financial losses may be likely if you lend money. Don't be too quick to judge your position or surroundings at work. Older members of your family may try to take advantage of you.";
+messages[8] = "Spend some quality time with the one you love. Your talents will shine at work. Avoid conflicts with in-laws or other family members. Do not let in-laws upset you.";
+messages[9] = "You can make financial deals, but it may be best if you're not using your own cash. It might be best to keep your ideas to yourself today. Social functions will bring you in touch with new lovers.";
+messages[10] = "Take your time; do not make any decisions in haste. You have to feel free to come and go as you please to achieve happiness. Avoid conflicts with in-laws or other family members.";
+messages[11] = "Sudden changes concerning coworkers may surprise you. Be careful not to consume too many spicy foods, or minor health problems could put you out of commission for the day. Don't be too quick to judge.";
+messages[12] = "Please try again."
 
 
 
