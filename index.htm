@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Horoscope Checker</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="Horoscope.css"/>
 </head>
 <body>
-<select id="Month">
+<div id="title">Check Your Horoscope Below...</div>
+
+    <select id="Month">
     <option value="1">January</option>
     <option value="2">February</option>
     <option value="3">March</option>
@@ -62,9 +64,9 @@
 <input type="text" id="name" value="" size="25">
 
 <button id="myButton" onclick="onSubmit()">Check Sign!</button>
-<div id="sign"></div>
 <div id="message"></div>
 <img id="image"/>
+<div id="birthday"></div>
 <!--<img id="image" src="img/Wheel.png"/>-->
 
 </body>

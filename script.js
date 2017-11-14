@@ -2,9 +2,9 @@ function onSubmit(){
     var month = document.getElementById("Month").value;
     var day = document.getElementById("Day").value;
     var name = document.getElementById("name").value;
-    console.log(name);
     var sign = determineSign(parseInt(month),parseInt(day));
-    document.getElementById("message").innerHTML=name + ", you're sign is " + signs[sign] + ". " + messages[sign];
+    document.getElementById("message").innerHTML=name + ", your sign is " + signs[sign] + ". " + messages[sign];
+    document.getElementById("birthday").innerHTML= birthday();
     document.getElementById("image").src= "img/" + signs[sign] + ".png";
 }
 
@@ -52,7 +52,7 @@ function determineSign(month,day){
     }
 }
 
-var signs = ["Aquarius","Pisces","Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagitarius","Capricorn","Your birthday is not real."]
+var signs = ["Aquarius","Pisces","Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagitarius","Capricorn","nonexistent, as your birthday is not real"]
 
 
 
@@ -70,6 +70,17 @@ messages[9] = "You can make financial deals, but it may be best if you're not us
 messages[10] = "Take your time; do not make any decisions in haste. You have to feel free to come and go as you please to achieve happiness. Avoid conflicts with in-laws or other family members.";
 messages[11] = "Sudden changes concerning coworkers may surprise you. Be careful not to consume too many spicy foods, or minor health problems could put you out of commission for the day. Don't be too quick to judge.";
 messages[12] = "Please try again.";
+
+
+function birthday (month,day){
+    var today = new Date();
+    var d = today.getDay();
+    var m = today.getMonth() + 1;
+    if(m == month && d == day){
+        return "Happy Birthday " + name + " !"
+    }
+    return "";
+}
 
 
 

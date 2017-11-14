@@ -1,12 +1,38 @@
+head {
+    color: greenyellow;
+
+}
+
 body {
-    background-color: navajowhite;
+    background-color: deepskyblue;
+    margin: 50px;
+    horiz-align: center;
 }
 h1 {
-    color: greenyellow;
+
 }
 p {
     color: red;
 }
-#myDiv {
-    font-size: 36px;
+button {
+    width: 100px;
+    color: black;
+}
+body {
+    font-family: sans-serif;
+    horiz-align: center;
+}
+#message {
+    color: black;
+    font-size: 25px;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+#image {
+    margin: auto;
+    display: block;
+}
+#title {
+    text-align: center;
+    font-size: 40px;
+    font-family: "Lucida Console", Monaco, monospace;
 }
