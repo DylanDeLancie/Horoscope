@@ -1,10 +1,10 @@
 function onSubmit(){
-    var month = document.getElementById("Month").value;
-    var day = document.getElementById("Day").value;
+    var month = parseInt(document.getElementById("Month").value);
+    var day = parseInt(document.getElementById("Day").value);
     var name = document.getElementById("name").value;
     var sign = determineSign(parseInt(month),parseInt(day));
     document.getElementById("message").innerHTML=name + ", your sign is " + signs[sign] + ". " + messages[sign];
-    document.getElementById("birthday").innerHTML= birthday();
+    document.getElementById("birthday").innerHTML= birthday(month,day,name);
     document.getElementById("image").src= "img/" + signs[sign] + ".png";
 }
 
@@ -72,11 +72,14 @@ messages[11] = "Sudden changes concerning coworkers may surprise you. Be careful
 messages[12] = "Please try again.";
 
 
-function birthday (month,day){
+function birthday (month,day,name){
+    console.log(month);
+    console.log(day);
+    console.log(name);
     var today = new Date();
-    var d = today.getDay();
+    var d = today.getDate();
     var m = today.getMonth() + 1;
-    if(m == month && d == day){
+    if(month == m  && day == d){
         return "Happy Birthday " + name + " !"
     }
     return "";

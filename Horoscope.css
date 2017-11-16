@@ -26,13 +26,21 @@ body {
     color: black;
     font-size: 25px;
     font-family: "Lucida Console", Monaco, monospace;
+    margin-top: 65px;
 }
 #image {
     margin: auto;
     display: block;
+    margin-top: 130px;
 }
 #title {
     text-align: center;
     font-size: 40px;
     font-family: "Lucida Console", Monaco, monospace;
+}
+#birthday {
+    color: black;
+    font-size: 25px;
+    font-family: "Lucida Console", Monaco, monospace;
+    margin-top: 50px;
 }
